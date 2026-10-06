@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NEON RIFT // Blobby</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="game"></canvas>
+<div id="hud">
+  <div class="topbar">
+    <div class="brand">NEON RIFT <span>// BLOBBY</span></div>
+    <div class="stats"><b id="wave">WAVE 1</b><span id="timer">00:00</span><span id="score">SCORE 0</span></div>
+  </div>
+  <div class="bars">
+    <div class="bar hp"><i id="hpbar"></i><label id="hptext">100 / 100</label></div>
+    <div class="bar xp"><i id="xpbar"></i><label id="leveltext">LV 1</label></div>
+  </div>
+  <div class="side">
+    <div>⚡ DASH <b id="dash">READY</b></div>
+    <div>☄ ULTIMATE <b id="ult">0%</b></div>
+    <div>💀 KILLS <b id="kills">0</b></div>
+    <div>💎 SHARDS <b id="shards">0</b></div>
+  </div>
+  <div id="bossWrap"><div class="bossName">RIFT TITAN</div><div class="bar boss"><i id="bossbar"></i></div></div>
+  <div id="toast"></div>
+  <div id="crosshair"></div>
+</div>
+<div id="menu" class="screen">
+  <div class="panel">
+    <div class="eyebrow">SECTOR // 07</div>
+    <h1>NEON<br><em>RIFT</em></h1>
+    <p>A runaway arena roguelite. Survive. Evolve. Break the simulation.</p>
+    <button id="start">ENTER THE RIFT</button>
+    <div class="controls"><span>WASD / ARROWS</span><span>MOUSE AIM</span><span>CLICK FIRE</span><span>SPACE DASH</span><span>Q OVERDRIVE</span><span>P PAUSE</span></div>
+    <small>High score and upgrades are saved locally.</small>
+  </div>
+</div>
+<div id="upgrade" class="screen hidden">
+  <div class="panel upgradePanel">
+    <div class="eyebrow">EVOLUTION DETECTED</div>
+    <h2>CHOOSE YOUR MUTATION</h2>
+    <div id="cards"></div>
+  </div>
+</div>
+<div id="pause" class="screen hidden"><div class="panel"><div class="eyebrow">SYSTEM HALTED</div><h2>PAUSED</h2><p>Press P to resume.</p></div></div>
+<div id="gameover" class="screen hidden">
+  <div class="panel"><div class="eyebrow">SIGNAL LOST</div><h2>RIFT COLLAPSED</h2><p id="final"></p><button id="again">RUN IT BACK</button></div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
